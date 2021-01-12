@@ -1,0 +1,326 @@
+/* ==UserStyle==
+@name           Github | Goon
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/github.user.css
+@version        1.0.0
+@description    github goon stylesheet
+@author         MK
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+
+/* goon palette */
+
+:root {
+    --goon-green: #16A085;
+    --goon-red: #BF616A;
+    --goon-blue: #00C3FF;
+	--goon-link: #7f8cce;
+	--goon-visited: #9a68cc;
+    --goon-yellow: #FBD34B;
+    --goon-primary-bg: #252A33;
+	--goon-primary-brighter: #2b313c;
+    --goon-secondary-bg: #323844;
+	--goon-tertiary-bg: #343a47;
+	--goon-secondary-brighter-bg: #3C4352;
+	--goon-text-normal: #abb6d1;
+	--goon-text-sub: #6c758b;
+	--goon-text-hover: #717a8f;
+	--goon-button-normal: #444c5e;
+	--goon-button-hover: #3C4352;
+	--goon-button-disabled: #252A33;
+}
+
+
+/* recoloring */
+
+.exploregrid-item {
+    color: var(--goon-text-normal);
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+	background: var(--goon-secondary-bg) !important;
+    border-radius: 12px;
+    box-shadow: none;
+    transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+}
+
+body > div.application-main > main > div.border-bottom.border-gray-light {
+	background-color: var(--goon-secondary-bg);
+}
+
+.header-search-current .jump-to-suggestions-results-container .navigation-item {
+    border-bottom: 0px solid #e1e4e8;
+}
+
+#js-pjax-container > div.MarketplaceBody > div.container-lg.p-responsive.clearfix > div.col-lg-9.mt-1.mb-4.float-lg-right > div.MarketplaceAnnouncement.rounded-1.d-sm-flex.flex-items-center.py-6.px-3.px-md-6.mb-6.position-relative.text-center.text-md-left > div.flex-auto.px-4 > p {
+color: unset !important;
+}
+
+.CircleBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--goon-secondary-brighter-bg) !important;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.box-shadow-extra-large, .box-shadow-medium {
+    box-shadow: none !important;
+}
+
+.bg-gray-light {
+    background-color: var(--goon-primary-brighter) !important;
+}
+
+.MarketplaceBackground-buffer {
+    background-color: var(--goon-primary-brighter) !important;
+}
+
+.subnav-item {
+    position: relative;
+    float: left;
+    padding: 5px 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--goon-text-normal);
+    border: none;
+    background: var(--goon-button-normal);
+}
+
+.UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current=false]), .UnderlineNav-item[role=tab][aria-selected=true] {
+    font-weight: 600;
+    border-bottom-color: var(--goon-link);
+    outline: 0px dotted transparent;
+    outline-offset: -1px;
+    color: var(--goon-text-normal);
+}
+
+.bg-gray-light {
+    background-color: var(--goon-primary-bg);
+}
+
+#js-repo-pjax-container > div.container-xl.clearfix.new-discussion-timeline.px-3.px-md-4.px-lg-5 > div > div.gutter-condensed.gutter-lg.d-flex.flex-column.flex-md-row > div.flex-shrink-0.col-12.col-md-9.mb-4.mb-md-0 > div.Box.mb-3 > div.Box-header.Box-header--blue.position-relative > div > div.flex-1.d-flex.flex-items-center.ml-3.min-width-0 > div > a.commit-author.user-mention {
+	color: var(--goon-text-normal)
+}
+
+.hx_avatar_stack_commit .AvatarStack-body {
+    background-color: transparent;
+}
+
+.avatar-user {
+    border-radius: 8px !important;
+}
+
+.Box-row--focus-gray.navigation-focus {
+    background-color: var(--goon-secondary-bg);
+}
+
+.Box {
+    background-color: var(--goon-secondary-brighter-bg);
+    border: none;
+    border-radius: 12px;
+}
+
+.Box-header {
+	background-color: var(--goon-tertiary-bg);
+	margin-bottom: 10px;
+}
+
+body {
+    color: var(--goon-text-sub);
+	background: var(--goon-primary-brighter);
+}
+
+
+.intro-shelf {
+    margin-top: 0;
+    color: var(--goon-text-normal);
+    background: var(--goon-secondary-brighter-bg);
+    border-bottom: none;
+}
+
+.border-bottom {
+    border-bottom: 2px solid var(--goon-secondary-brighter-bg) !important;
+}
+
+.form-control, .form-select {
+    color: var(--goon-text-normal);
+    background-color: var(--goon-secondary-brighter-bg);
+    border: 0px solid #e1e4e8;
+    box-shadow: none !important;
+}
+
+.link-gray-dark, .table-list-header-toggle .btn-link.selected, .table-list-header-toggle .btn-link.selected:hover {
+    color: var(--goon-text-normal) !important;
+}
+
+a, .mb-2 {
+    color: var(--goon-link);
+}
+
+.pt-3, #repos-container > h2 {
+	color: var(--goon-text-normal) !important;
+}
+
+p, .text-gray, #dashboard > div > div.f6.text-gray.mt-4 > a.f6.link-gray.mb-2.mt-2.d-inline-block {
+    color: var(--goon-text-sub) !important;
+}
+
+.border-top {
+    border-top: 2px solid var(--goon-secondary-brighter-bg) !important;
+}
+
+.bg-gray {
+    background-color: var(--goon-secondary-bg) !important;
+}
+
+.bg-white {
+    background-color: var(--goon-tertiary-bg) !important;
+}
+
+.border-right {
+    border: none !important;
+    box-shadow: 0px 0px 20px #252A33;
+}
+
+.Header {
+    z-index: 32;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: hsla(0,0%,100%,.7);
+    background-color: var(--goon-primary-bg) !important;
+}
+
+/* reshaping elements */
+
+.form-control, .form-select {
+    color: var(--goon-text-normal) !important;
+    background-color: var(--goon-secondary-bg) !important;
+    border: 0px solid #e1e4e8;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.social-count {
+    position: relative;
+    float: left;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--goon-text-normal);
+    vertical-align: middle;
+    background-color: var(--goon-secondary-brighter-bg);
+    border: none;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: none;
+}
+
+.UnderlineNav-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--goon-text-sub);
+    text-align: center;
+    white-space: nowrap;
+    background-color: initial;
+    border: 0;
+    border-bottom: 2px solid rgba(209,213,218,0);
+    transition: border-bottom-color .36s ease-in;
+}
+
+.UnderlineNav {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: inset 0 0px 0 #e1e4e8;
+    justify-content: space-between;
+}
+
+.Box--responsive .Box-header, .Box-header {
+    border-radius: 12px;
+}
+
+.Box-header, .Box--responsive .Box-header, .Box-body:last-of-type, .Box-row {
+    border: none;
+}
+
+body > div.application-main > div > aside.team-left-column.col-12.col-md-3.col-lg-3.pr-3.mt-5.hide-lg.hide-md.hide-sm.border-bottom > h2,
+#repos-container > h2 {
+	color: var(--goon-text-normal);
+	font-size: 20px !important;
+}
+
+body > div.application-main > div > aside.team-left-column.col-12.col-md-3.col-lg-3.pr-3.mt-5.hide-lg.hide-md.hide-sm.border-bottom > div:nth-child(1) > div > form {
+	background: var(--goon-blue) !important;
+	border-radius: 12px;
+}
+
+.border {
+    border: 0px solid #e1e4e8 !important;
+}
+
+.rounded-1 {
+    border-radius: 12px !important;
+}
+
+.Box {
+    background-color: var(--goon-secondary-brighter-bg);
+    border: none;
+    border-radius:12px;
+}
+
+
+/* Buttons */
+
+.shelf-dismiss .close-button:hover {
+    color: var(--goon-text-normal);
+    border-color: transparent;
+    background: var(--goon-secondary-bg);
+    border-radius: 8px;
+}
+.shelf-dismiss .close-button {
+    width: 28px;
+    height: 28px;
+    padding: 3px 5px;
+    color: rgba(27,31,35,.7);
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-primary.hover, .btn-primary, [open]>.btn-primary {
+    background-color: var(--goon-green) !important;
+	color: #fff !important;
+}
+
+.btn-primary.hover, .btn-primary:hover, [open]>.btn-primary {
+    background-color: var(--goon-button-disabled) !important;
+	color: #fff !important;
+}
+
+.btn.hover, .btn, [open]>.btn {
+    background-color: var(--goon-button-normal);
+    transition-duration: .1s;
+}
+
+.btn {
+    color: var(--goon-text-normal);
+    background-color: var(--goon-button-normal);
+	border: none;
+    box-shadow: none;
+    transition: background-color .2s cubic-bezier(.3,0,.5,1);
+}
+
+.btn:hover {
+	background-color: var(--goon-button-disabled) !important;
+	color: var(--goon-button-hover) !important;
+}
+
+
+
+/* Footer */
+	
+}
