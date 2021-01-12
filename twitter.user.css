@@ -1,0 +1,76 @@
+/* ==UserStyle==
+@name           Goon | Twitter
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/twitter.user.css
+@version        1.0.0
+@description    Not done yet.
+@author         MK
+==/UserStyle== */
+
+@-moz-document domain("twitter.com") {
+    /* Quelltext hier eingeben... */
+
+:root {
+	--goon-green: #16A085;
+	--goon-red: #BF616A;
+	--goon-blue: #00C3FF;
+	--goon-link: #7f8cce;
+	--goon-visited: #9a68cc;
+	--goon-yellow: #FBD34B;
+	--goon-primary-bg: #252A33;
+	--goon-primary-brighter: #2b313c;
+	--goon-secondary-bg: #323844;
+	--goon-tertiary-bg: #343a47;
+	--goon-secondary-brighter-bg: #3C4352;
+	--goon-text-normal: #abb6d1;
+	--goon-text-sub: #6c758b;
+	--goon-text-hover: #717a8f;
+	--goon-button-normal: #444c5e;
+	--goon-button-hover: #3C4352;
+	--goon-button-disabled: #252A33;
+}
+	
+	body, .r-yfoy6g {
+		background: var(--goon-primary-bg) !important;
+	}
+	
+	.r-1uaug3w {
+		background: var(--goon-primary-brighter);
+		border: none;
+	}	
+
+	.css-1dbjc4n.r-1ila09b.r-qklmqi.r-1adg3ll.r-1ny4l3l {
+		background: var(--goon-secondary-bg);
+		border-radius: 12px;
+		margin-bottom: 12px;
+		border: none;
+		transition: background 0.3s;
+	}
+	
+	.css-1dbjc4n.r-1ila09b.r-qklmqi.r-1adg3ll.r-1ny4l3l:hover {
+		background: var(--goon-primary-bg) !important;
+		border-radius: 12px;
+		margin-bottom: 12px;
+		transition: background 0.3s;
+		box-shadow: 0px 0px 12px var(--goon-secondary-brighter-bg);
+	}
+	
+	.r-18bvks7 {
+    border: none;
+}
+
+	
+	.r-1cuuowz {
+    	background: none;
+	}
+	
+	/* Global border-radius */
+	.r-sdzlij {
+    	border-radius: 12px;
+	}
+	
+	/* Searchbar */
+	.r-aaos50 {
+    	background-color: var(--goon-primary-brighter);
+	}
+
+}
