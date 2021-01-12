@@ -33,7 +33,7 @@ Reddit
 
 ShellShock (Don't ask me why i was so bored)
 [Previews comming soon!]
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/LANxMK/Goon-custom-stylesheets/master/shellshockIO.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/LANxMK/Goon-custom-stylesheets/master/shellShockIO.user.css)
 
 Crunchy Roll (unfinished)
 [Previews comming soon!]
