@@ -1,0 +1,173 @@
+/* ==UserStyle==
+@name           Crunchyroll | Goon
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/crunchyroll.user.css
+@version        1.0.0
+@description    A Goon Stylesheet for the Crunchyroll Streaming Platform
+@author         MK
+==/UserStyle== */
+@-moz-document domain("crunchyroll.com") {
+
+:root {
+	--goon-green: #16A085;
+	--goon-red: #BF616A;
+	--goon-blue: #00C3FF;
+	--goon-link: #7f8cce;
+	--goon-visited: #9a68cc;
+	--goon-yellow: #FBD34B;
+	--goon-primary-bg: #252A33;
+	--goon-primary-brighter: #2b313c;
+	--goon-secondary-bg: #323844;
+	--goon-tertiary-bg: #343a47;
+	--goon-secondary-brighter-bg: #3C4352;
+	--goon-text-normal: #abb6d1;
+	--goon-text-sub: #6c758b;
+	--goon-text-hover: #717a8f;
+	--goon-button-normal: #444c5e;
+	--goon-button-hover: #3C4352;
+	--goon-button-disabled: #252A33;
+}
+
+.header-search-form .header-searchbox {
+	color: var(--goon-text-normal);
+    background: var(--goon-secondary-bg);
+	border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+body.main-page {
+	background: var(--goon-primary-bg) !important;
+}
+
+.series-title {
+	color: var(--goon-text-normal);
+}
+
+a {
+	color: var(--goon-text-normal);
+}
+
+.games,
+.store {
+	background-color: transparent !important;
+}
+
+#games_button,
+#store_button {
+	color: var(--goon-text-hover) !important;
+}
+
+#games_button:hover,
+#store_button:hover {
+	background: transparent !important;
+	color: var(--goon-text-normal) !important;
+}
+
+#cr_logo_noTagline > path:nth-child(2),
+#cr_logo_noTagline > path:nth-child(3),
+#cr_logo_noTagline > path:nth-child(5) {
+	fill: rgb(255, 255, 255) !important;
+}
+
+.header-menubar li a:hover,
+.header-menubar li.state-selected a {
+	color: var(--goon-text-normal);
+}
+
+.header-menubar li a {
+	color: var(--goon-text-sub);
+}
+
+.header-userpanel .header-icon {
+	font-size: 0;
+	color: var(--goon-text-hover);
+	fill: var(--goon-text-hover);
+}
+
+button {
+	color: var(--goon-text-normal);
+	background-color: var(--goon-button-normal);
+	border: none;
+}
+
+#template_skin_leaderboard {
+	height: 0px !important;
+}
+
+#main_content > ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-constent: center;
+	align-content: space-between;
+	align-items: flex-start;
+}
+
+#template_container.template-container {
+	background: var(--goon-secondary-bg);
+	border-radius: 12px;
+}
+
+.site-header {
+	position: relative;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	background: var(--goon-primary-bg);
+	box-shadow: 0 0 0.5rem rgba(83, 78, 76, .5);
+}
+
+#main_content {
+	width: 100%;
+}
+
+.portrait-element {
+	background: var(--goon-secondary-brighter-bg);
+	border-radius: 15px;
+	padding: 12px;
+	margin-bottom: 12px;
+}
+
+
+.portrait-element img.portrait {
+	border-radius: 12px;
+}
+
+#tabs {
+	background: var(--goon-secondary-brighter-bg);
+	font-size: 14px;
+	border-radius: 12px;
+}
+
+.main-tabs {
+	background: var(--goon-secondary-brighter-bg);
+	padding: 10 10px;
+}
+
+.main-tabs a.selected,
+.main-tabs a.selected:hover {
+	background: #fff;
+	color: #3f3f3f;
+	font-weight: 700;
+}
+
+#sidebar,
+#footer,
+#header_profile_button > button > div.caption {
+	display: none !important;
+}
+
+img.portrait {
+	border: none;
+}
+
+.container-shadow,
+.site-header {
+	box-shadow: none;
+}
+}
+@-moz-document url-prefix("crunchyroll.com/comics/manga") {
+
+#template_container.template-container {
+	background: var(--goon-secondary-bg);
+	width: 80%;
+	border-radius: 12px;
+}
+}
