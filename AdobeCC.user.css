@@ -1,0 +1,340 @@
+/* ==UserStyle==
+@name           Adobe CreativeCloud | Goon
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/creativecloud.adobe
+@version        1.0.0
+@description    A Goon Stylesheet for the Creative Cloud App
+@author         MK
+==/UserStyle== */
+
+@-moz-document domain("creativecloud.adobe.com") {
+
+
+/* DC-Base dark palette | recolor */
+
+:root {
+    --goon-green: #16A085;
+    --goon-red: #BF616A;
+    --goon-blue: #00C3FF;
+    --goon-yellow: #FBD34B;
+    --goon-primary-bg: #252A33;
+    --goon-secondary-bg: #323844;
+	--goon-secondary-brighter-bg: #3C4352;
+	--goon-text-normal: #abb6d1;
+	--goon-text-sub: #6c758b;
+	--goon-text-hover: #717a8f;
+	--goon-button-normal: #444c5e;
+	--goon-button-hover:
+	--goon-button-disabled:
+}
+ html {
+overflow: scroll;
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 0px;
+background: transparent;
+}
+
+ul.ui-widget-content::-webkit-scrollbar {
+width: 0px;
+}
+/* Font Colors */
+
+.utilnav-container .utility-nav.utility-nav-light {
+    color:  var(--goon-text-normal);
+}
+
+.unc-container .spectrum--light .spectrum-ActionButton--quiet:hover, .unc-container .spectrum--light .spectrum-Tool:hover {
+    background-color: var(--goon-green);
+    box-shadow: none;
+    color: white !important;
+}
+.unc-container .notifications-widget-bell {
+    text-align: center;
+    position: relative;
+    outline: 0;
+}
+.utilnav-container .spectrum--light .spectrum-ActionButton .spectrum-Icon, .utilnav-container .spectrum--light .spectrum-Tool .spectrum-Icon, .utilnav-container .app-launcher-light .app-launcher-icon {
+    color:  var(--goon-text-normal);
+}
+
+.spectrum--light .spectrum-Search-icon {
+    color:  var(--goon-text-normal);
+}
+
+.spectrum-Search-input {
+	color:  var(--goon-text-normal);
+}
+
+.spectrum-Tabs-itemLabel {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+}
+.spectrum--light .spectrum-Tabs-item.focus-ring, .spectrum--light .spectrum-Tabs-item.is-selected, .spectrum--light .spectrum-Tabs-item.is-selected .spectrum-Icon, .spectrum--light .spectrum-Tabs-item:hover, .spectrum--light .spectrum-Tabs-item:hover .spectrum-Icon {
+	color: var(--goon-text-hover);
+}
+
+.spectrum--light .spectrum-Tabs-item, .spectrum--light .spectrum-Tabs-item .spectrum-Icon {
+    color: var(--goon-text-normal);
+}
+
+.navbar .nav-header .navbar-title-link {
+    border: 0px solid transparent;
+    color: var(--goon-text-normal);
+    margin-left: -2px;
+	padding-right: 92px;
+}
+.navbar .nav-header .navbar-title .title {
+    color: var(--goon-text-normal);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+.spectrum--light .spectrum-SideNav-item.is-selected>.spectrum-SideNav-itemLink {
+    color: white;
+    background-color: var(--goon-green);
+}
+
+.spectrum--light .spectrum-SideNav-heading {
+    color: var(--goon-text-normal);
+	font-size: 1.0rem;
+	font-weight: 700;
+	background: none;
+	border-radius: 12px;
+	margin-bottom: 23px;
+	padding-top: 15px;
+}
+
+.spectrum--light .spectrum-SideNav-itemLink:hover {
+    background: var(--goon-button-normal);
+    color: white;
+	fill: white;
+	font-size: 1.0rem;
+	font-weight: 500;
+	border-radius: 12px;
+}
+
+.spectrum--light .spectrum-SideNav-itemLink {
+    background: none;
+    color: var(--goon-text-normal);
+	font-size: 1.0rem;
+	font-weight: 500;
+	border-radius: 12px;
+}
+
+.listView-appTile-label .spectrum-Link.status-info, .listView-appTile-label .spectrum-Link.status-info:hover, .listView-appTile-label .spectrum-Link.update-available-link {
+    color: var(--goon-text-sub);
+	font-weight: 600;
+}
+
+.listView-appTile-headerName-wrapper-text .listView-appTile-primaryText {
+	color: var(--goon-text-normal);
+}
+
+.app-tiles-header-section .app-tiles-header {
+    color: var(--goon-text-normal);
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.appTile-headerName-wrapper-text .appTile-primaryText {
+    color: var(--goon-text-normal);
+	font-size: 1.18rem;
+	font-weight: 700;
+}
+
+.spectrum--light .spectrum-Heading--subtitle3 {
+    color: var(--goon-text-sub);
+	font-weight: 600;
+}
+
+.listView-app-tiles-header-section .listView-app-tiles-header {
+    color: var(--goon-text-normal);
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+/* Basic Color Changes */
+
+.utilnav-parent .utility-nav {
+    background-color: var(--goon-primary-bg) !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.overlay {
+    -webkit-animation: increaseOpacity .15s ease-out;
+    animation: increaseOpacity .15s ease-out;
+    background-color: var(--goon-primary-bg);
+    height: 100%;
+    opacity: 1;
+
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    z-index: 999;
+}
+
+.spectrum--light .spectrum-Textfield {
+    background-color: var(--goon-secondary-brighter-bg);
+    border-color: var(--goon-secondary-brighter-bg);
+    color: var(--goon-text-normal);
+}
+
+.spectrum--light .spectrum-StatusLight--positive:before {
+    background-color: var(--goon-green);
+}
+
+.appTile-Header-platform-icons.spectrum-Icon {
+    color: var(--goon-text-normal);
+}
+
+.apps-section-content {
+    background-color: var(--goon-secondary-bg);
+}
+
+
+.app-sidenav {
+	 background-color: var(--goon-primary-bg);
+	border-right: none;
+}
+
+.navbar {
+    background-color: var(--goon-primary-bg);
+    border-bottom: none;
+}
+
+.spectrum--light .spectrum-Card {
+	background-color: var(--goon-secondary-brighter-bg);
+	border: none;
+	border-radius: 12px;
+}
+
+.listView-app-tiles-header-section .listView-app-tiles-wrapper {
+	background-color: var(--goon-secondary-brighter-bg);
+	border: none;
+}
+
+.listView_appTile_container,
+.listView-app-tiles-header-section .listView-app-tiles-wrapper,
+.listView-app-tiles-header-section .listView-app-tiles-wrapper .app-tile {
+    background-color: var(--goon-secondary-brighter-bg);
+    border: none;
+    border-radius: 12px;
+}
+
+/* Buttons */
+
+.spectrum--light .spectrum-Tabs-item, .spectrum--light .spectrum-Tabs-item .spectrum-Icon {
+    border-radius: 12px;
+	padding: 0 17px;
+	height: 30px !important;
+    font-weight: 800;
+
+}
+
+.spectrum--light .spectrum-Button--primary:hover {
+    background-color: var(--goon-green);
+    border-color: var(--goon-green);
+    color: #fff;
+}
+
+.spectrum--light .spectrum-Button--primary {
+    background-color: var(--goon-button-normal);
+    border-color: var(--goon-button-normal);
+    color: var(--goon-text-normal);
+}
+
+.spectrum--light .spectrum-Button--primary.spectrum-Button--quiet {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--goon-text-normal);
+}
+
+.spectrum--light .spectrum-ActionButton--quiet:hover, .spectrum--light .spectrum-Tool:hover {
+    background-color: var(--goon-green);
+    border-color: var(--goon-green);
+    color: #fff;
+}
+
+.spectrum--light .spectrum-ActionButton--quiet, .spectrum--light .spectrum-Tool {
+    background-color: var(--goon-button-normal);
+    border-color: var(--goon-button-normal);
+    color: var(--goon-text-normal);
+	fill: red;
+}
+
+.spectrum--light .spectrum-ActionButton .spectrum-ActionButton-hold, .spectrum--light .spectrum-ActionButton .spectrum-Icon, .spectrum--light .spectrum-Tool .spectrum-ActionButton-hold, .spectrum--light .spectrum-Tool .spectrum-Icon {
+    color: var(--goon-text-normal);
+}
+
+.spectrum--light .spectrum-ActionButton:hover .spectrum-ActionButton-hold, .spectrum--light .spectrum-ActionButton:hover .spectrum-Icon, .spectrum--light .spectrum-Tool:hover .spectrum-ActionButton-hold, .spectrum--light .spectrum-Tool:hover .spectrum-Icon {
+    color: white;
+}
+.spectrum-Button {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px;
+    height: 32px;
+    min-width: 72px;
+    padding: 0 14px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.spectrum-ActionButton--quiet, .spectrum-Tool {
+    border-width: 1px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Shape Changes */
+
+.apps-section-content::-webkit-scrollbar {
+  	display: none;
+}
+.spectrum-Textfield {
+    border: 0px solid;
+    border-radius: 12px;
+    height: 35px;
+    font-family: adobe-clean,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apps-section-content {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+div.app-main-container {
+	background: var(--goon-primary-bg);
+}
+/* Remove unused Stuff */
+
+.appTile-footer-container {
+	border: none;
+}
+
+.cc-app-header, .default-banner-item-layout, .utilnav-container .utility-nav .utility-nav-icon.un-upgrade-wrapper, .app-sidenav>ul>li:not(:last-child):after, .spectrum--light .spectrum-Tabs-selectionIndicator, .adbMsgClientWrapper #adbmsgContainer .adbmsgCta {
+    display: none;
+}
+
+.footer-container {
+	background: var(--goon-primary-bg);
+	border: none;
+
+}
+
+.app-container {
+	background: var(--goon-primary-bg)
+}
+}
