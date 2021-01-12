@@ -1,0 +1,197 @@
+/* ==UserStyle==
+@name           Goon | Wikipedia
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/wikipedia.user.css
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://de.wikipedia.org") {
+
+	:root {
+		--goon-green: #16A085;
+		--goon-red: #BF616A;
+		--goon-blue: #00C3FF;
+		--goon-link: #7f8cce;
+		--goon-visited: #9a68cc;
+		--goon-yellow: #FBD34B;
+		--goon-primary-bg: #252A33;
+		--goon-primary-brighter: #2b313c;
+		--goon-secondary-bg: #323844;
+		--goon-tertiary-bg: #343a47;
+		--goon-secondary-brighter-bg: #3C4352;
+		--goon-text-normal: #abb6d1;
+		--goon-text-sub: #6c758b;
+		--goon-text-hover: #717a8f;
+		--goon-button-normal: #444c5e;
+		--goon-button-hover: #3C4352;
+		--goon-button-disabled: #252A33;
+	}
+
+
+	body,
+	#mw-page-base {
+		background: var(--goon-primary-bg);
+	}
+
+	.mw-body {
+		background: var(--goon-primary-brighter);
+		border: none;
+		border-radius: 24px 0px 0px 24px;
+		margin-top: 8px;
+	}
+
+	#p-logo a {
+		filter: brightness(-100%) invert(66%) sepia(12%) saturate(814%) hue-rotate(183deg) brightness(86%) contrast(50%);
+	}
+
+	.vector-menu-portal .body li a:visited {
+		color: var(--goon-visited);
+	}
+
+	a,
+	.toctogglelabel {
+		color: var(--goon-link) !important;
+	}
+
+	.mw-body,
+	.parsoid-body {
+		color: var(--goon-text-normal);
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 15px;
+	}
+
+	.mw-body h1,
+	.mw-body-content h1,
+	.mw-body-content h2 {
+		color: var(--goon-text-normal);
+		font-weight: 700;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 34px;
+		border: none;
+	}
+
+	.vector-menu-portal .body ul {
+		background: var(--goon-primary-brighter);
+		border-radius: 12px;
+		padding: 4px;
+	}
+
+	.vector-menu-portal .body li {
+		margin-bottom: 3px;
+		padding-left: 8px;
+		padding-right: 8px;
+		border-radius: 8px;
+		transition: background 0.3s, padding 0.3s, font-size 0.3s;
+	}
+
+	.vector-menu-portal .body li:hover {
+		margin-bottom: 3px;
+		padding: 8px;
+		background: var(--goon-button-hover);
+		border-radius: 8px;
+		transition: background 0.3s, padding 0.3s, font-size 0.3s;
+		font-weight: 700;
+		font-size: 0.8em;
+	}
+
+	.vector-menu-portal h3 {
+		display: block;
+		background-image: none;
+		color: var(--goon-text-normal);
+		margin: 0.5em 0 0 0.66666667em;
+		border: 0;
+		padding: 0.25em 0;
+		font-size: 1.02em;
+		font-weight: 600;
+		cursor: default;
+	}
+
+	.hintergrundfarbe1.rahmenfarbe1.navigation-not-searchable.noprint,
+	.catlinks,
+	.toc {
+		background: var(--goon-secondary-brighter-bg);
+		border-radius: 12px;
+		padding: 8px !important;
+		border: none !important;
+	}
+
+	.vector-menu-tabs li a {
+		background-position: right bottom;
+		color: var(--goon-text-normal);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: flex;
+		float: right;
+		height: 3.07692308em;
+		position: relative;
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 0.8125em;
+		justify-items: center;
+		cursor: pointer;
+		background: none;
+		border-radius: 8px;
+		margin-right: 4px;
+		text-align: center;
+		align-items: center;
+		transition: background 0.3s;
+	}
+
+	.vector-menu-tabs li a:hover {
+		background-position: right bottom;
+		color: var(--goon-text-normal);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: flex;
+		float: right;
+		height: 3.07692308em;
+		position: relative;
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 0.8125em;
+		cursor: pointer;
+		background: var(--goon-button-hover);
+		border-radius: 8px;
+		margin-right: 4px;
+		text-align: center;
+		align-items: center;
+		transition: background 0.3s;
+	}
+
+	.vector-menu-tabs li,
+	.vector-menu-tabs,
+	.vector-menu-tabs a,
+	#mw-head .vector-menu-dropdown h3 {
+		background-image: none !important;
+	}
+	.vector-menu-tabs .selected {
+		background: transparent !important;
+	}
+	.mw-footer ul {
+		display: none;
+	}
+
+	#searchInput {
+		background-color: var(--goon-secondary-bg);
+		color: var(--goon-text-normal);
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		border: 0px solid #a2a9b1;
+		border-radius: 8px;
+		padding: 8px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		font-size: 0.8125em;
+		direction: ltr;
+		-webkit-transition: border-color 250ms, box-shadow 250ms;
+		-moz-transition: border-color 250ms, box-shadow 250ms;
+		transition: border-color 250ms, box-shadow 250ms;
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+	}
+}
