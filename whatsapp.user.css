@@ -1,0 +1,381 @@
+/* ==UserStyle==
+@name           Goon | Whatsapp
+@namespace      github.com/LANxMK/Goon-custom-stylesheets/whatsapp.user.css
+@version        1.0.0
+@description    Whatsapp in a better darkmode, that actually looks diffrent then just other user stylesheets.
+@author         Me
+==/UserStyle== */
+@-moz-document domain("web.whatsapp.com") {
+	/* goon palette */
+	
+	:root {
+		--goon-green: #16A085;
+		--goon-red: #BF616A;
+		--goon-blue: #00C3FF;
+		--goon-link: #7f8cce;
+		--goon-blurple: rgb(84, 109, 155);
+		--goon-visited: #9a68cc;
+		--goon-yellow: #FBD34B;
+		--goon-primary-bg: #252A33;
+		--goon-primary-brighter: #2b313c;
+		--goon-secondary-bg: #323844;
+		--goon-tertiary-bg: #343a47;
+		--goon-secondary-brighter-bg: #3C4352;
+		--goon-text-normal: #abb6d1;
+		--goon-text-sub: #6c758b;
+		--goon-text-hover: #717a8f;
+		--goon-button-normal: #444c5e;
+		--goon-button-hover: #3C4352;
+		--goon-button-disabled: #252A33;
+	}
+	
+	/* Color Changes */
+	
+	html[dir] ._3eShu, html[dir] ._1qTcI {
+    	background-color: var(--goon-secondary-brighter-bg);
+	}
+	
+	html[dir] ._1qTcI
+
+	html[dir] ._3BgLd {
+    	margin: 24px;
+	}
+	
+	._2dByE._22cZ2 {
+		background: var(--goon-secondary-bg) !important;
+	}
+	
+	._1qTcI {
+ 		box-shadow: 0px 0px 12px #252A33;
+	}
+	
+	html[dir] ._3BgLd {
+    	margin: 24px;
+	}
+	
+	html[dir] ._3gJlY, ._1srPs, html[dir] ._2dByE, html[dir] .LR5wt {
+    	border-radius: 0px 0px 12px 12px;
+	}
+	
+	html[dir] ._3eShu {
+    	border-radius: 12px 12px 0px 0px;
+	}
+	
+	._--7_r {
+    	margin-left: 10px;
+   	 	margin-right: 10px;
+   	 	color: var(--secondary);
+   	 	background: var(--goon-primary-brighter);
+    	border-radius: 12px;
+    	height: 32px;
+		transition: background 0.5s;
+	}
+	
+	._2RAgj {
+    	margin-left: 10px;
+   	 	margin-right: 10px;
+    	height: 32px;
+		border-radius: 12px;
+		transition: background 0.5s;
+}
+	
+	html[dir] ._5m0TK {
+		display: none;
+	}
+	
+	html[dir] ._1fiOp, html[dir] ._2T-91 {
+    	background-color: var(--goon-secondary-brighter-bg);
+	}
+	
+	html[dir] ._3gJlY, ._1srPs, html[dir] ._2dByE, html[dir] .LR5wt {
+    	background-color: var(--goon-secondary-bg);
+	}
+	
+	html[dir] ._2BuJM,  html[dir] ._1tbWk, html[dir] .pr5ny, html[dir] ._3gJlY, html[dir] ._2gSSF, html[dir] .dark ._33fVQ {
+    	background-color: var(--goon-primary-bg);
+	}
+	
+	._1-iDe._1xXdX {
+		border: 0px;
+	}
+
+	html[dir] ._1iFv8, html[dir] ._1QUKR,
+	html[dir] .dark ._3qx7_, html[dir] ._3ee1T,
+	html[dir] ._3R02z {
+  	  background-color: var(--goon-secondary-bg);
+	}
+	
+	html[dir] ._3R02z {
+  	 	padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	html[dir] ._3xpD_ {
+		background: var(--goon-secondary-brighter-bg);
+	}
+	
+	html[dir] ._3uMse {
+		background: #3c435273;
+	}
+	
+	html[dir] .eJ0yJ:hover {
+    	background-color: var(--goon-button-hover);
+		transition: background-color 1s;
+	}
+	
+	html[dir] .eJ0yJ {
+  	 	background-color: var(--goon-secondary-bg);
+  	 	cursor: pointer;
+    	border-radius: 24px;
+		transition: background-color 1s;
+	}
+	
+	html[dir] ._2Bps4, ._3wAoe {
+		background-color: var(--goon-secondary-brighter-bg) !important;
+  	 	cursor: pointer;
+    	border-radius: 24px;
+		transition: background-color 1s;
+		margin-left: 12px;
+		margin-right: 12px;
+		box-shadow: none !important;
+	}
+	
+	._3wAoe {
+		background-color: var(--goon-secondary-brighter-bg) !important;
+  	 	cursor: pointer;
+    	border-radius: 24px;
+		transition: background-color 1s;
+		margin-left: 12px;
+		margin-right: 12px;
+		box-shadow: none !important;
+		margin-top: 6px;
+		border: none;
+	}
+	
+	html[dir] .eJ0yJ._13opk {
+    	background-color: var(--goon-button-normal);
+		transition: background-color 1s;
+	}
+	
+	html[dir] ._3AAXj.SjSeX {
+    	background-color: var(--goon-button-normal);
+		transition: background-color 1s;
+	}
+	
+	html[dir] .message-out ._3sKvP {
+    	background-color: #3c435273;
+	}
+	
+	html[dir=ltr] ._1q11a._4tndQ {
+    	background: var(--goon-button-normal);
+		border-radius: 8px;
+	}
+	
+	html[dir] .message-in ._3sKvP, html[dir] ._2szmK {
+    	background-color: #3c435273;
+	}	
+	
+	#main > footer > div._3ee1T._1LkpH.copyable-area,
+	#main > header,
+	html[dir] ._2vJ01 {
+		background: transparent;
+		box-shadow: none;
+	}
+
+	/* Form Changes */
+	
+	html[dir] .G_MLO {
+    	padding: 22px 24px 20px;
+    	background-color: var(--goon-secondary-bg);
+    	border-radius: 12px !important;
+    	box-shadow: 0 17px 50px 0 rgba(var(--shadow-rgb),.19),0 12px 15px 0 rgba(var(--shadow-rgb),.24);
+	}
+	
+	html[dir] ._1hQZ_, html[dir] .eJyPE, html[dir] .FV2Qy {
+    	padding: 10px 24px;
+    	border-radius: 12px;
+	}
+	
+	html[dir] .message-in ._2iML2, html[dir] .D-CMr._1t3gq, html[dir] ._4vJUr.SjSeX {
+    	background-color: var(--goon-secondary-brighter-bg);
+	}
+
+	html[dir=ltr] ._2n28r {
+    	left: 0;
+    	border-radius: 12px;
+	}
+	
+	html[dir] ._2s_eZ {
+    	padding: 9px 0;
+    	background-color: var(--goon-secondary-brighter-bg);
+    	border-radius: 12px;
+    	box-shadow: 0px 0px 12px #252A33;
+	}
+	
+	html[dir] ._36Osw._39Nmx {
+    	background-color: var(--goon-primary-brighter);
+	}
+	
+	.message-out {
+    	animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	}
+	
+	html[dir] ._1BjNO, html[dir] ._2goTk {
+    	background-color: transparent;
+    	border-radius: 17px;
+	}
+	
+	html[dir] ._2kHpK, html[dir] .eJ0yJ:hover ._2kHpK, html[dir] ._2kHpK,
+	html[dir] .eJ0yJ._13opk:after, html[dir] .eJ0yJ:hover:after,
+	html[dir] .eJ0yJ._13opk:after, html[dir] .eJ0yJ:hover:after {
+    	border-top: 0px !important;
+	}
+	
+	
+	html[dir] ._3ee1T {
+    	padding: 5px 24px;
+	}
+	
+	._1q11a {
+    	position: absolute;
+    	top: 4px;
+    	z-index: 800;
+    	width: 25px;
+    	height: 21px;
+    	overflow: hidden;
+	}
+	
+	#pane-side > div:nth-child(1) > div > div > div:nth-child(16) > div > div > div._325lp > div {
+		height: 60px;
+		width: 60px;
+	}
+	
+	html[dir] ._3uMse {
+  	  margin: 5px 10px;
+  	  padding: 9px 12px 11px;
+  	  	border: 0px solid var(--compose-input-border);
+    	border-radius: 12px;
+	}
+	
+	html[dir=ltr] .message-out ._1dvTE ._3sKvP, html[dir=rtl] .message-in ._1dvTE ._3sKvP, html[dir] ._3sKvP, html[dir] ._3xpD_ {
+    border-radius: 8px;
+}
+	
+	._3uMse {
+    order: -1;
+}
+	
+	/* Full Size */
+	
+	.app-wrapper-web .h70RQ {
+		top: 0px;
+		width: 100%;
+		height: 100%;
+	}
+	
+	/* remove */
+	
+	#pane-side::-webkit-scrollbar {
+		display: none;
+	} 
+
+	html[dir] .dark ._3qx7_ {
+		border: none;
+	}
+	
+	html[dir=ltr] .message-out ._2-dPL, html[dir=ltr] .tail-override-right ._2-dPL {
+		display: none;
+	}
+	
+
+	/*	animations */
+
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+	  		opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* anim */
+@keyframes scroll {
+  to {
+    background-position: 8000000px -5000000px;
+  }
+}
+	
+._1-iDe._1xXdX {
+	flex: 0%;
+	width: 0px !important;
+	margin-right: -275px !important;
+	min-width: 0px !important;
+	transition: flex 0.5s, margin 0.5s;
+}
+
+._1-iDe._1xXdX:hover {
+	flex: 55%;
+	margin-right: 0px !important;
+	transition: flex 0.5s, margin 0.5s;
+}
+	
+[data-asset-chat-background-dark] {
+    background-image: url(https://i.imgur.com/j5yj0OQ.png);
+    background-size: 300px;
+    filter: invert(23%) sepia(8%) saturate(1287%) hue-rotate(183deg) brightness(99%) contrast(89%);
+    animation: 200000s scroll infinite linear;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+	
+html[dir=ltr] ._1kdBg {
+    background-image: url(https://i.imgur.com/dxQgfIx.png);
+    background-size: 300px;
+	background-color: #252A33;
+    animation: 200000s scroll infinite linear;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+	
+}
