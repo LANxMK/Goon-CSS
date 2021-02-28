@@ -1,0 +1,991 @@
+  /* ███                                                                                                ███  / 
+ (   ███     ▄▄▄▄▄                                                                                      ███ (  
+  \  ███   //█████///////////    ███      ████████  ████████  ████████  ███      ████████  ███   ███    ███  \ 
+   ) ███   //█████///////////    ███      ███▀▀███  ███▀▀███  ███▀▀███  ███      ███▀▀███  ███   ███    ███   )
+  /  ███     █████      /////    ███      ███  ███  ███  ███  ███  ███  ███      ███  ███  █████████    ███  / 
+ (   ███     █████      /////    ███      ████████  ███  ███  ████████  ███      ████████  ▀▀▀███▀▀▀    ███ (  
+  \  ███     █████      /////    ███      ███▀▀███  ███  ███  ███▀▀▀▀▀  ███      ███▀▀███     ███       ███  \ 
+   ) ███     █████      /////    ███████  ███  ███  ███  ███  ███       ███████  ███  ███     ███       ███   )
+  /  ███     █████      /////    ▀▀▀▀▀▀▀  ▀▀▀  ▀▀▀  ▀▀▀  ▀▀▀  ▀▀▀       ▀▀▀▀▀▀▀  ▀▀▀  ▀▀▀     ▀▀▀       ███  / 
+ (   ███     █████      /////                                                                           ███ (  
+  \  ███     █████      /////           █▀█ █   █▀█ █ █   █▀▀ █▀█ █▀█ █▀█ █▀▀ █▀▀ ▀█▀ █▀▀ █▀▄           ███  \ 
+   ) ███     ███████████/////██         █▀▀ █   █▀█ ▀█▀   █   █ █ █ █ █ █ █▀  █    █  █▀  █ █           ███   )
+  /  ███     ███████████/////██         █   █▄▄ █ █  █    █▄▄ █▄█ █ █ █ █ █▄▄ █▄▄  █  █▄▄ █▄▀           ███  / 
+ (   ███                /////                                                                           ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ███                                                                                                ███   )
+  /  ██████████████████████████████████████████████████████████████████████████████████████████████████████  / 
+ (   ████████████████████ ███ ▄ █ ▄ █ ▄ █ ███ ▄ █ █ ████ ▄ █ ▄ █ ▄▄█ ▄▄█ ▄▄█ ▄ █▄ ▄█ ▄▄████████████████████ (  
+  \  ████████████████████ ███ ▄ █ █ █ ▄▄█ ███ ▄ █▄ ▄████ ▄▄█ ▄▀█ ▄██▄▄ █ ▄██ █ ██ ██▄▄ ████████████████████  \ 
+   ) ████████████████████▄▄▄█▄█▄█▄█▄█▄███▄▄▄█▄█▄██▄█████▄███▄█▄█▄▄▄█▄▄▄█▄▄▄█▄█▄██▄██▄▄▄████████████████████   )
+  /  ██████████████████████████████████████████████████████████████████████████████████████████████████████  / 
+ (   ██████████████████████████████████████ ▄▄█ ▄ █ ▄ █▄ ▄█▄ ▄█ ▄▄█ █ █████████████████████████████████████ (  
+  \  ████████████████████▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███▄▄ █ ▄▄█ █ ██ ███ ██ ▄▄█▄ ▄███▄▄▄▄▄▄▄▄▄▄▄▄▄▄████████████████████  \ 
+   ) ██████████████████████████████████████▄▄▄█▄███▄▄▄██▄██▄▄▄█▄████▄██████████████████████████████████████   )
+  /  ██████████████████████████████████████████████████████████████████████████████████████████████████████  / 
+ (   ████████████████████ ▄▄█ ▄ █ ▄ █ ▄ ███████ ▄▄█▄ ▄█ █ █ ███ ▄▄█ ▄▄█ █ █ ▄▄█ ▄▄█▄ ▄█████████████████████ (  
+  \  ████████████████████ █ █ █ █ █ █ █ ██▄▄▄██▄▄ ██ ██▄ ▄█ ███ ▄██▄▄ █ ▄ █ ▄██ ▄███ ██████████████████████  \ 
+   ) ████████████████████▄▄▄█▄▄▄█▄▄▄█▄█▄███████▄▄▄██▄███▄██▄▄▄█▄▄▄█▄▄▄█▄█▄█▄▄▄█▄▄▄██▄██████████████████████   )
+  /  ███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀███  / 
+ (   ███                                                                                                ███ (  
+  \  ███    *//* ==UserStyle==                                                                          ███  \ 
+   ) ███    @name           Goon | Spotify                @namespace      Github.com/LANxMK/Goon-CSS    ███   )
+  /  ███    @version        1.2.0                         @description    Goon Spotify Dark theme       ███  / 
+ (   ███    @author         MK                            @homepageURL    https://LANPlay.net/          ███ (  
+  \  ███    @license        GNU General Public v3.0                                                     ███  \ 
+   ) ███                                                                                                ███   )
+  /  ███    @preprocessor default                                                                       ███  / 
+ (   ███    @var text  myFontSize        "Font size"        16px                                        ███ (  
+  \  ███    @var color myBackgroundColor "Background color" #0b0                                        ███  \ 
+   ) ███                                                                                                ███   )
+  /  ███                                                                                                ███  / 
+ (   ███                                                                                                ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ███   @updateURL https://github.com/LANxMK/Goon-CSS/my-style.user.css                              ███   )
+  /  ███   ==/UserStyle== *//*                                                                          ███  / 
+ (   ███                                                                                                ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ██████████████████████████████████████████████████████████████████████████████████████████████████████   )
+  /  ███                                                                                                ███  / 
+ (   ███                                                                                                ███ (  
+  \  ███    This is a small overview for the theme code search     |       INFORMATION FOR THIS         ███  \ 
+   ) ███    the   respective   headings  to   navigate  faster	   |            STYLESHEET              ███   )
+  /  ███                                                                                                ███  / 
+ (   ███     ● 00 | Goon Pallette                                     ---------- H E L P ----------     ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ███     ● 01 | Main UI                                           To  get to the  class you are     ███   )
+  /  ███          ● A | Navigation                                    looking  for, you simply have     ███  / 
+ (   ███          ● B | Friend Activity                               to search  for  the  category     ███ (  
+  \  ███          ● C | Player                                        number  and   the  underlying     ███  \ 
+   ) ███              ● A | Fullscreen                                letter, like for example 02.C     ███   )
+  /  ███              ● B | Devices                                                                     ███  / 
+ (   ███              ● C | Buttons                                   -------- E R R O R S --------     ███ (  
+  \  ███          ● D | Search                                                                          ███  \ 
+   ) ███          ● E | Settings                                      If  there  are  any  problems     ███   )
+  /  ███          ● F | Buttons                                       with  this stylesheet, please     ███  / 
+ (   ███                                                              get in contact with the autor     ███ (  
+  \  ███     ● 02 | Navigation tabs                                                                     ███  \ 
+   ) ███          ● A | HOME                                          ------- C O N T A C T -------     ███   )
+  /  ███          ● B | Browse                                                                          ███  / 
+ (   ███          ● C | Radio                                         Discord:               MK#2002    ███ (  
+  \  ███          ● D | Library                                       Twitter:               LANxMK     ███  \ 
+   ) ███              ● A | Made for you    	                      Mail:    kadicmufid@gmail.com     ███   )
+  /  ███              ● B | Recent                                    Instagram:         mufid.dark     ███  / 
+ (   ███              ● C | Liked                                                                       ███ (  
+  \  ███              ● D | Albums                                    ------- C R E D I T S -------     ███  \ 
+   ) ███              ● E | Artists                                                                     ███   )
+  /  ███              ● F | Podcasts                                  A huge thanks for the CreArts     ███  / 
+ (   ███          ● E | Playlists                                     Community and also  the owner     ███ (  
+  \  ███                                                              CorellanStoma  himself,   who     ███  \ 
+   ) ███                                                              made it possible to make this     ███   )
+  /  ███                                                              custom  Discord  Goon  styled     ███  / 
+ (   ███                                                              a thing, so check them out at     ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ███                                                               https://rebrand.ly/CreArts       ███   )
+  /  ███                                                              -----------------------------     ███  / 
+ (   ███                                                                                                ███ (  
+  \  ███                                                                                                ███  \ 
+   ) ███                                                                                                ███   )
+  /  ██████████████████████████████████████████████████████████████████████████████████████████████████████ */ 
+/*
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█████████ ▄▄ ███████████████████████████████████████████████████████████████████████████████████████████████████
+▀▀▀▀▀████ ██ ████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     ████ ▀▀ ████ *//*   00		|  Goon Theme Pallette                                                      *//*
+     ▀▀▀▀▀▀▀▀▀▀▀▀ 
+*/	
+	
+	:root {
+
+		/* accent colors */
+		--goon-green: #23c597; 
+		--goon-red: #ce7784;
+		--goon-blue: #9499E1;
+		--goon-yellow: #fcc45b;
+		--goon-purple: #8686e4;
+		
+		/* main colors */
+		--goon-primary: #252A33;
+		--goon-primary-brighter: #2b313c;
+		--goon-secondary: #323844;
+		--goon-secondary-brighter: #3C4352;
+		--goon-tertiary: #4c5361;
+		
+		/* text & buttons */
+		--goon-text-normal: #abb6d1;
+		--goon-text-sub: #6c758b;
+		--goon-text-hover: #717a8f;
+		--goon-button-normal: #444c5e;
+		--goon-button-hover: #3C4352;
+		--goon-button-disabled: #252A33;
+		
+		/* secondary darker colors */
+		--goonoled-primary: #1c1f24;
+		--goonoled-primary-brighter: #20242a;
+		--goonoled-secondary: #262930;
+		--goonoled-secondary-brighter: #272b32;
+		--goonoled-tertiary: #2e323a;
+		--goonoled-tertiary-brighter: #2e323a;
+		--goonoled-hover: #505562;
+		--goonoled-text: #7181a6;
+	}	
+
+/*
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██████████▀ ████████████████████████████████████████████████████████████████████████████████████████████████████
+▀▀▀▀▀████▄█ █████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     ██████ █████ *//*   01		|  MAIN UI	                                                                *//*
+     ▀▀▀▀▀▀▀▀▀▀▀▀
+*/
+	/* main */
+	body, html {
+		background-color: transparent;
+	}
+	
+	/* loading bg */
+	#loading, #view-content {
+		background-color: var(--goon-primary-brighter);
+	}
+	
+	/* What's a scrollbar */
+	.scrollbar-style-visible-mac::-webkit-scrollbar, .scrollbar-style-visible-mac ::-webkit-scrollbar, .scrollbar-style-visible-windows::-webkit-scrollbar, .scrollbar-style-visible-windows ::-webkit-scrollbar, .scrollbar-style-visible-linux::-webkit-scrollbar, .scrollbar-style-visible-linux ::-webkit-scrollbar {
+		display: none !important;
+	}
+		
+/* Header */
+	.content-top-bar {
+		background: var(--goonoled-primary-brighter);
+	}
+	
+	/* header top nav background */
+	.Header__top-bar {
+		background: var(--goonoled-primary-brighter);
+	}
+	
+	.Header__background {
+		display: none;
+	}
+	
+	.header, #page-header {
+		position: fixed;
+		min-height: 208px;
+	}
+	
+	.HomeRoot__header {
+		position: relative;
+		height: 188px;
+		width: 100%;
+	}
+	
+	/* header sticky */
+	div.Header__sticky.sticky-top {
+		background: var(--goonoled-primary-brighter);
+	}
+	
+	.HomeHeader__hpto-wrapper {
+		display: block;
+	}
+	
+	/* header wrapper */
+	.Header__content-wrapper {
+		background: var(--goonoled-primary-brighter);
+		width: 100%;
+		height: 180px;
+		padding-top: 194px;
+		position: fixed;
+		min-height: 194px !important;
+		padding-bottom: 0px;
+	}
+		
+	/* header background */
+	.Header__background-color {
+		background: var(--goonoled-primary-brighter) !important;
+	}
+	
+	/* sticky header background */
+	.Header__background-scroll-overlay {
+		background: var(--goonoled-primary-brighter);
+	}
+	
+	.Header--with-active-sticky-header {
+		transform: none;
+		opacity: 1;
+	}
+	
+	/* image onhover zoom | hover */
+	.Card__image-wrapper:hover {
+		padding: 64%+0px !important;
+		transition: padding 0.3s;
+		overflow: visible;
+	}
+	
+	/* image onhover zoom | normal */
+	.Card__image-wrapper {
+		margin-top: 4px;
+		transition: padding 0.3s;
+	}
+	
+	/* Artist, genre image cards */
+	.Card--artist .Card__image,
+	.Card--artist .Card__image-hit-area,
+	.Card--artist .Card__overlay,
+	.Card--artist .Card__placeholder,
+	.Card--profile .Card__image,
+	.Card--profile .Card__image-hit-area,
+	.Card--profile .Card__overlay,
+	.Card--profile .Card__placeholder,
+	.genre-card,
+	.Card__image,
+	.Card__image-hit-area,
+	.Card__overlay,
+	.Card__placeholder {
+		border-radius: 24px;
+	}
+	
+	/* Image padding */
+	.Card--artist .Card__image-hit-area,
+	.Card--profile .Card__image-hit-area {
+		right: 0%;
+		left: 0%;
+		top: 0%;
+		bottom: 0%;
+		background: rgba(24,24,24,.7);
+	}
+	
+	.Card--artist .Card__image-wrapper {
+		background: var(--goon-secondary);
+		border-radius: 30px;
+	}
+	
+	.Card__image-wrapper:hover .Card__image-hit-area {
+		transform: rotate(2deg);
+		transition: transform 0.3s;
+	}
+	
+	.Card__image-wrapper .Card__image-hit-area {
+		transform: rotate(0deg);
+		transition: transform 0.5s;
+	}
+	
+	/* image onhover overlay  */
+	.Card__overlay {
+		right: 10px;
+		left: 10px;
+		top: unset;
+		bottom: 10px;
+		height: 56px;
+		border-bottom: none;
+		border-radius: 20px !important;
+		background: #2b313c;
+	}
+	
+	/* image onhover overlay | play */
+	.Button--style-icon-stroke {
+		box-shadow: none;
+		background: transparent;
+		transition-property: transform,box-shadow,color,background-color;
+		border: 0px solid white;
+		border-radius: 50%;
+	}
+	.Button--style-icon-stroke:hover {
+		color: var(--goon-blue);
+		cursor: pointer;
+	}
+	
+	/* image onhover overlay | bg */
+	.Card__image-hit-area > div {
+		position: relative;
+	}
+	
+	/* image onhover overlay | button click */
+	.Button--style-icon-stroke:not(:disabled):hover:active,
+	.Button--style-icon-stroke:not(:disabled):hover:active:after {
+		box-shadow: none;
+		color: var(--goon-primary);
+		cursor: pointer;
+	}
+	
+	/* image onhover overlay | button click */
+	.Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):active.Button--is-strong-style,
+	.Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):hover:active {
+		color: var(--goon-primary);
+		cursor: pointer;
+		
+	}
+	
+	/* image onhover overlay | button onhover */
+	.Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):hover {
+		color: var(--goon-blue);
+		cursor: pointer;
+	}
+	
+	
+	.Button--style-icon-background {
+		background: var(--goon-secondary);
+		transition-property: transform,box-shadow,color,background-color;
+		border-radius: 24px;
+	}
+	
+	/* image onhover overlay | play button */
+	.Card__play-button {
+		transform: translateX(-50%) translateY(-117%);
+		cursor: pointer;
+	}
+	
+	/* image onhover overlay | playing button */
+	.Card__image-hit-area:hover .Card__play-button--playing .Button--style-icon-background {
+		background: transparent !important;
+		cursor: pointer;
+	}
+	
+	/* image onhover overlay | heart & options button */
+	.Card__add-button,
+	.Card__more-button	{
+		transform: translateY(-130%);
+		cursor: pointer;
+	}
+	
+	/* remove strokes */
+	.Button--style-icon-stroke:before,
+	.Button--style-icon-stroke:after,
+	.Button--style-icon-stroke:not(:disabled):hover:after,
+	.Button--style-icon-stroke:not(:disabled):hover,
+	.CanonicalButton__focus-ring,
+	.Button--style-icon-stroke	{
+		box-shadow: none;	
+	}
+	
+	/* image onhover zoom | hover */
+	.Card__image-hit-area:hover .Card__image {
+		background-size: 128% !important;
+		transition: background-size 0.3s;
+	}
+	
+	/* image onhover zoom | normal */
+	.Card__image-hit-area .Card__image {
+		background-size: 100% !important;
+		transition: background-size 0.3s;
+	}
+		
+	/* image onhover zoom | hide desc. | hover */
+	.Card.Card--playlist div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-description,
+	.Card.Card--playlist div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-metadata,
+	.Card.Card--show div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-description,
+	.Card.Card--show div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-metadata,
+	.Card.Card--album div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-description,
+	.Card.Card--album div:nth-child(2):hover ~ div:nth-child(3) .Card__info-subtitle-metadata {
+		height: 0px !important;
+		opacity: 0;
+		transition: height 0.3s, opacity 0.2s;
+	}
+	
+	/* image onhover zoom | rotate title | hover */
+	.Card.Card--playlist div:nth-child(2):hover ~ div:nth-child(3) .Card__info-title,
+	.Card.Card--artist div:nth-child(2):hover ~ div:nth-child(3) .Card__info-title,
+	.Card.Card--show div:nth-child(2):hover ~ div:nth-child(3) .Card__info-title,
+	.Card.Card--album div:nth-child(2):hover ~ div:nth-child(3) .Card__info-title {
+		padding-bottom: unset !important;
+		transform: rotate(2deg) !important;
+		transition: transform 0.3s;
+		margin-bottom: 0px;
+	}
+	
+		/* image onhover zoom | rotate title | normal */
+	.Card.Card--playlist div:nth-child(2)~ div:nth-child(3) .Card__info-title,
+	.Card.Card--artist div:nth-child(2) ~ div:nth-child(3) .Card__info-title,
+	.Card.Card--show div:nth-child(2) ~ div:nth-child(3) .Card__info-title,
+	.Card.Card--album div:nth-child(2) ~ div:nth-child(3) .Card__info-title {
+		padding-bottom: 70px !important;
+		transform: rotate(0deg) !important;
+		transition: transform 0.3s;
+		margin-bottom: -64px;
+	}
+	
+	
+	/* image onhover zoom | hide desc. | normal */
+	.Card.Card--playlist div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-metadata,
+	.Card.Card--show div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-metadata,
+	.Card.Card--album div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-metadata	{
+		height: unset !important;
+		transition: height 0.3s;
+	}
+	
+	/* image onhover zoom | hide desc. | normal */
+	.Card.Card--playlist div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-description,
+	.Card.Card--show div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-description,
+	.Card.Card--album div:nth-child(2) ~ div:nth-child(3) .Card__info-subtitle-description	{
+		height: 85px !important;
+		opacity: 1;
+		transition: height 0.3s, opacity 0.2s;
+	}
+	
+	.Card__info-subtitle-metadata {
+		visibility: hidden !important;
+	}
+	
+	/* menu */
+	.Menu {
+		border: none;
+		background-color: var(--goon-secondary-brighter);
+		border-radius: 8px !important;
+		box-shadow: 0 4px 12px 4px rgba(0,0,0,.5);
+	}
+	
+	.MenuItem .item.hover:not(.disabled) {
+		background: red;	 
+	}
+	
+	.Menu--is-submenu, .Menu__root-items {
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+	}
+	
+	/* context menu | background*/
+	.context-menu {
+		padding: 8px 0;
+		background-color: var(--goon-secondary-brighter);
+		box-shadow: 0 4px 12px 4px rgba(0,0,0,.5);
+		border-radius: 8px !important;
+	}
+	
+	/* context menu | item | hover */
+	.context-menu .item.hover:not(.disabled) {
+		background-color: var(--goon-blue);
+		cursor: default;
+		font-weight: 600;
+		white-space: nowrap;
+	}
+	
+	/* context menu | item | seperator */
+	.context-menu .sep {
+		margin: 6px 12px;
+		background-color: gray;
+		height: 2px;
+	}
+	
+	/* remove navigation arrows */
+	.browser-navigation-top-bar {
+		display: none;
+	}
+	
+	/* top header nav */
+	.body-container--mac .content-top-bar, .body-container--windows .content-top-bar {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: center;
+	}
+	
+	.SearchInput__input {
+		padding: 0 24px;
+		border-radius: 8px !important;
+		height: 30px;
+	}
+	
+	/* Section devider */
+	.GlueSectionDivider {
+		background: var(--goon-primary-brighter);
+		border-radius: 24px;
+		height: 145px;
+		width: 98%;
+		overflow: visible;
+		position: absolute;
+		margin: -71px 0px 4px -23px;
+		padding: 24px;
+	}
+	
+	.GlueSectionDivider__container {
+		border: none;
+	}
+	
+	/* more space between images */
+	.Carousel__grid-wrapper {
+		margin-bottom: 100px;
+	}
+	
+	/* top space for title */
+	.glue-page-wrapper {
+		margin-top: 100px;
+	}
+	
+	/* title font */
+	.GlueSectionDivider__title {
+		font-size: 18pt;
+	}
+	
+	/* remove title desc */
+	.GlueSectionDivider__description {
+		display: none;
+	}
+	
+	/* 
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████      ██   ██ *//*   01.A		|  MAIN UI	>  Navigation                                               *//*
+▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀
+*/   
+	/* left navigationbar */
+	.sidebar .sidebar-navbar,
+    .LeftSidebar__scroll-section,
+    .sidebar,
+	.sidebar .LeftSidebarNewPlaylistButton__button {
+        background-color: var(--goon-primary) !important;
+		padding-top: 0px;
+	}
+	
+	.sidebar:hover .sidebar-navbar,
+    .LeftSidebar__scroll-section,
+    .sidebar, 
+	.sidebar:hover .LeftSidebarNewPlaylistButton__button {
+        background-color: var(--goon-primary) !important;
+		padding-top: 0px;
+	}
+	
+	/* modified variables */
+	.sidebar {
+		--left-sidebar-item-height: 32px;
+		--left-sidebar-padding-left: 28px;
+		--left-sidebar-padding-right: 19px;
+     }
+	 
+	/* threedots menu bg */
+	.sidebar-top-items__drag-area {
+		background: var(--goonoled-primary-brighter);
+	}
+	 
+	#menu-wrapper {
+		width: 256px;
+		min-width: 71px;
+	}
+	
+	/* Navigation normal/opened */
+	#menu-wrapper .LeftSidebar__scroll-section {
+		opacity: 1;
+		transition: opacity 0.3s;
+		white-space: nowrap;
+		margin-top: -24px;
+	}
+
+	/* Navigation hover/closed */
+	#menu-wrapper:hover .LeftSidebar__scroll-section {
+		opacity: 1;
+		transition: opacity 0.3s;
+		white-space: nowrap;
+	}
+	
+	/* Category Title */
+	html .SidebarList__title {
+		font-size: 14pt;
+		font-weight: 800;
+		color: white;
+		padding: 8px 0px 8px;
+	}
+	
+	html #menu-wrapper:hover .SidebarList {
+		background: var(--goonoled-primary-brighter);
+		transition: padding 0.3s;
+	}
+	
+	html #menu-wrapper .SidebarList {
+		background: var(--goonoled-primary-brighter);
+		transition: padding 0.3s;
+		height: 159px;
+		padding-top: 16px;
+	}
+	
+	html #menu-wrapper .LeftSidebar__scroll-section .SidebarList {
+		background: var(--goon-primary);
+		transition: padding 0.3s;
+		margin: 0 12px;
+		border-radius: 8px;
+		height: 100%;
+	}
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██   ██   ██ *//*   01.B		|  MAIN UI	>  Friend Activity                                          *//*
+▀▀▀▀ ▀▀▀▀▀  ▀▀▀▀▀
+*/
+	#view-buddy-list {
+		background-color: red !important;
+	}
+	
+	.scrollbar-style-visible-windows .buddy-list-top-bar-dragger {
+		background-color: red !important;
+	}
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██        ██ *//*   01.C		|  MAIN UI	>  Player													*//*
+▀▀▀▀ ▀▀        ▀▀
+*/
+
+	/* player main div */
+	.view-player {
+		background: var(--goonoled-primary-brighter);
+		border-top: none;
+	}
+	
+	/* player progress handle | normal */
+	.progress-bar .handle {
+		background: #ffffff;
+		border-radius: 4px;
+		border: 0px solid #ffffff;
+		box-shadow: none;
+		height: 0px;
+		opacity: 0;
+		margin-top: 10px;
+		transition: height 0.5s, margin-top 0.5s, opacity 0.3s;
+	}
+	
+	/* player progress handle | hover */
+	.progress-bar-wrapper.handle:hover .handle,
+	.progress-bar-wrapper.active .handle {
+		height: 20px;
+		margin-top: 0px;
+		transition: height 0.5s, margin-top 0.5s, opacity 0.5s;
+	}
+	
+	/* player buttons recolor | icons */
+	.card.playing .view-player .player-controls-container .controls .button-play.button-play:hover:before,
+	.tl-row.playing .view-player .player-controls-container .controls .button-play.button-play:hover:before,
+	.view-player .player-controls-container .controls .button-play.button-play.playing:hover:before {
+		z-index: 999;
+	}
+	
+	/* player buttons recolor | hover & active */
+	/* active */
+	.view-player .player-controls-container .controls .button-repeat.active,
+	.view-player .player-controls-container .controls .button-shuffle.active,
+	.view-player .player-controls-container .controls .button-thumbs-down.active,
+	.view-player .player-controls-container .controls .button-thumbs-up.active,
+	/* hover */
+	.view-player .player-controls-container .controls .button-play.contextmenu-active,
+	.view-player .player-controls-container .controls .button-play.contextmenu-active:after,
+	.view-player .player-controls-container .controls .button-repeat.active.contextmenu-active,
+	.view-player .player-controls-container .controls .button-repeat.active:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-shuffle.active.contextmenu-active,
+	.view-player .player-controls-container .controls .button-shuffle.active:not(:disabled):hover, 
+	.view-player .player-controls-container .controls .button-thumbs-down.active.contextmenu-active,
+	.view-player .player-controls-container .controls .button-thumbs-down.active:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-thumbs-up.active.contextmenu-active,
+	.view-player .player-controls-container .controls .button-thumbs-up.active:not(:disabled):hover,
+	.view-player .player-controls-container .controls .next.contextmenu-active,
+	.view-player .player-controls-container .controls .next:not(:disabled):hover,
+	.view-player .player-controls-container .controls .previous.contextmenu-active,
+	.view-player .player-controls-container .controls .previous:not(:disabled):hover,
+	.view-player .player-controls-container .controls .next.contextmenu-active,
+	.view-player .player-controls-container .controls .next:not(:disabled):hover,
+	.view-player .player-controls-container .controls .previous.contextmenu-active,
+	.view-player .player-controls-container .controls .previous:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-repeat.contextmenu-active,
+	.view-player .player-controls-container .controls .button-repeat:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-shuffle.contextmenu-active,
+	.view-player .player-controls-container .controls .button-shuffle:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-thumbs-down.contextmenu-active,
+	.view-player .player-controls-container .controls .button-thumbs-down:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-thumbs-up.contextmenu-active,
+	.view-player .player-controls-container .controls .button-thumbs-up:not(:disabled):hover,
+	.view-player .extra-controls-container .button-devices.contextmenu-active,
+	.view-player .extra-controls-container .button-devices:not(:disabled):hover,
+	.view-player .extra-controls-container .button-lyrics.contextmenu-active,
+	.view-player .extra-controls-container .button-lyrics:not(:disabled):hover,
+	.view-player .extra-controls-container .button-queue.contextmenu-active,
+	.view-player .extra-controls-container .button-queue:not(:disabled):hover,
+	.view-player .extra-controls-container .button-subtitles.contextmenu-active,
+	.view-player .extra-controls-container .button-subtitles:not(:disabled):hover,
+	.button.button-icon-only.contextmenu-active,
+	.button.button-icon-only:not(:disabled):hover {
+		color: var(--goon-blue);
+		background-color: var(--goon-secondary);
+		border-radius: 8px;
+		box-shadow: none;
+	}
+	
+	/* player buttons recolor | play (seperate bc. it uses background instead of color) */
+	.view-player .player-controls-container .controls .button-play:not(:disabled):hover,
+	.view-player .player-controls-container .controls .button-play.button-play.playing:not(:hover),
+	.view-player .player-controls-container .controls .button-play:not(:disabled):hover:after {
+		background-color: var(--goon-blue) !important;
+		box-shadow: none;
+		border: none;
+		border-radius: 8px;
+	}
+	
+	/* player buttons recolor | normal */
+	.view-player .player-controls-container .controls .button-play.button-play.playing:not(:hover):after,
+	.view-player .player-controls-container .controls .button-play,
+	.view-player .player-controls-container .controls .button-play:after	{
+		background-color: transparent;
+		box-shadow: none;
+		border: none;
+	}
+	
+	/* player volume | front | hover */
+	.view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner,
+	.view-player .extra-controls-container .volumebar-container:hover .inner {
+		background-color: var(--goon-blue);
+		box-shadow: none;
+		border: none;
+	}
+	
+	#now-playing-image-large > figure {
+		height: 100% !important;
+	}
+	
+	/* cover image | expanded | normal */
+	#view-now-playing.expanded .large.image .cover-image {
+		height: 300px !important;
+		background-size: 100%; /* 225px */
+		background-position: top;
+		transition: background-size 0.3s;
+	}
+	
+	/* cover image | expanded | hover */
+	#view-now-playing.expanded:hover .large.image .cover-image {
+		background-size: 150%;
+		transition: background-size 0.3s;
+	}
+
+	/* cover image | expanded card | normal */
+	#view-now-playing.expanded .large.image {
+		height: 225px !important;
+		width: 225px;
+		margin: 0 0 12px 15px;
+		border-radius: 24px;
+		transform: rotate(0deg);
+		transition: height 0.3s, transform 0.5s;
+	}
+	/* cover image | expanded card | hover */
+	#view-now-playing.expanded .large.image:hover {
+		height: 300px !important;
+		transform: rotate(2deg);
+		transition: height 0.3s, transform 0.5s;
+	}
+	
+	/* cover image | overlay | normal */
+	.now-playing__corner-buttons {
+		position: absolute;
+		display: flex;
+		opacity: 0;
+		top: unset;
+		transition: opacity .5s;
+		bottom: 12px;
+		left: 84px;
+		transition: opacity 0s !important;
+	}
+	
+	/* cover image | overlay | hover */
+	#view-now-playing .image:hover .now-playing__corner-buttons {
+		opacity: 1;
+		transition: opacity 0s !important;
+	}
+	
+	/* cover image | overlay | hide button */
+	#view-now-playing.now-playing-large .large .now-playing__button {
+		width: 56px;
+		height: 56px;
+		border-radius: 12px;
+		background-color: var(--goon-secondary-brighter);
+	}
+	
+	/* cover image | overlay | hide button icon */
+	#view-now-playing.now-playing-large .large .now-playing__button:before {
+		line-height: unset;
+		position: relative;
+		top: 31%;
+		left: 1%;
+		font-size: 20px;
+	}
+
+/* Volume, Fullscreen buttons
+ {
+    color: #ffffff;
+}
+	
+	/* repeat active  */
+	.view-player .player-controls-container .button-repeat.active:after,
+	.view-player .player-controls-container .button-shuffle.active:after {
+		border-radius: 4px;
+		background-color: var(--goon-blue);
+		height: 6px;
+		width: 20px;
+	}
+		
+	/* player progress | back | normal  */
+	.progress-bar, .progress-bar .inner {
+		background: var(--goonoled-primary);
+		border-radius: 4px;
+		margin-top: -6px;
+		height: 12px;
+	}
+	
+	/* player progress | front | hover */
+	.progress-bar .inner,
+	.view-player .player-controls-container .progress-container.progress-bar-enabled.dragging-progress-bar .progress-bar .inner {
+		background-color: var(--goon-blue);
+	}
+
+/*
+▄▄▄▄
+████ *//*	  01.C.A	|  Player	>  Fullscreen 												            *//*
+▀▀▀▀ 
+*/
+
+/*
+▄▄▄▄
+████ *//*	  01.C.B	|  Player	>  Devices 													  	        *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄
+████ *//*	  01.C.D	|  Player	>  Buttons									  			                *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██        ██	*//* 	01.D	|  MAIN UI	>  Search												  	*//*
+▀▀▀▀   ▀▀▀▀▀▀▀▀  
+*/
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██   ██   ██	*//* 	01.E	|  MAIN UI	>  Settings											  		*//*
+▀▀▀▀ ▀▀        ▀▀
+*/
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████      ██   ██	*//* 	01.F	|  MAIN UI	>  Buttons												    *//*
+▀▀▀▀      ▀▀   ▀▀
+*/
+
+/*
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█████████▀▄▄▀███████████████████████████████████████████████████████████████████████████████████████████████████
+▀▀▀▀▀██████▀▄████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     ████▀ ▀▀████ *//* 	01		| Navigation                                                                *//*
+     ▀▀▀▀▀▀▀▀▀▀▀▀
+*/
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████      ██   ██ *//*    02.A	| Navigation  > HOME                                                        *//*
+▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀
+*/
+	/* Main background */
+	.HomeRoot {
+		position: relative;
+		background: var(--goon-primary);
+	}
+	
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██   ██   ██ /*    02.B	| Navigation  > Browse                                                      *//*
+▀▀▀▀ ▀▀▀▀▀  ▀▀▀▀▀
+*/
+
+	/* main app */
+	#app-browse {
+		background-color: var(--goon-primary) !important;
+	}
+
+	/* card genre onhover zoom | hide desc. | hover */
+	.card.genre-card:hover div:nth-child(1) ~ .gc-image-container {
+		transform: rotate(2deg);
+		height: 300px;
+		z-index: 999;
+		border-radius: 24px;
+		box-shadow: 0 0 12px var(--goonoled-primary-brighter);
+		transition: transform 0.3s, margin 0.3s;
+	}
+		
+	/* card genre onhover zoom | hide desc. | normal */
+	.card.genre-card div:nth-child(1)  ~ .gc-image-container {
+		background: transparent;
+		height: 300px;
+		transform: rotate(0deg);
+		border-radius: 24px;
+		transition: transform 1s, margin 0.3s;
+	}
+	
+	/* card genre | resize image */
+	.card.genre-card div:nth-child(1) ~ .gc-image-container .gc-image.gc-image-cols-1 {
+		height: 300px !important;
+		border-radius: 24px;
+		background-size: 300px;
+		transition: background-size 1s;
+	}
+	
+	.card.genre-card:hover div:nth-child(1) ~ .gc-image-container .gc-image.gc-image-cols-1 {
+		height: 300px !important;
+		background-size: 380px;
+		transition: background-size 0.3s;
+	}
+
+	
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██        ██ /*    02.C 	| Navigation  > Radio                                                       *//*
+▀▀▀▀ ▀▀        ▀▀
+*/
+
+	#mount-radio-hub {
+		background-color: var(--goon-primary) !important;
+	}
+	
+	#mount-radio-hub .Header__content-wrapper {
+		background: var(--goonoled-primary-brighter);
+		width: 100%;
+		height: 208px;
+		padding-top: 194px;
+		position: fixed;
+		min-height: 208px !important;
+		padding-bottom: 12px;
+	}
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██        ██ /*    02.C 	| Navigation  > Library                                                     *//*
+▀▀▀▀   ▀▀▀▀▀▀▀▀  
+*/
+
+/*
+▄▄▄▄
+████ /*	  01.C.A  | Library     > Made for you                                                              *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄
+████ /*	  01.C.A  | Library     > Recent                                                                    *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄
+████ /*	  01.C.A  | Library     > Liked                                                                     *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄
+████ /*	  01.C.A  | Library     > Albums                                                                    *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄
+████ /*	  01.C.A  | Library     > Artists                                                                   *//*
+▀▀▀▀
+*/
+
+/*
+▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄
+████ ██   ██   ██ /*   02.D 	| Navigation  > Podcasts                                                    *//*
+▀▀▀▀ ▀▀        ▀▀ 
+*/
