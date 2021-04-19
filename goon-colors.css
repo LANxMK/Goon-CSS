@@ -1,23 +1,20 @@
-root {
-  --goon-green: #23c597;
+:root {
+	--goon-green: #23c597;
 	--goon-red: #ce7784;
 	--goon-blue: #9499E1;
 	--goon-yellow: #fcc45b;
 	--goon-purple: #8686e4;
-	
 	--goon-primary: #252A33;
 	--goon-primary-brighter: #2b313c;
 	--goon-secondary: #323844;
 	--goon-secondary-brighter: #3C4352;
 	--goon-tertiary: #4c5361;
-
 	--goon-text-normal: #abb6d1;
 	--goon-text-sub: #6c758b;
 	--goon-text-hover: #717a8f;
 	--goon-button-normal: #444c5e;
 	--goon-button-hover: #3C4352;
 	--goon-button-disabled: #252A33;
-
 	--goonoled-primary: #1c1f24;
 	--goonoled-primary-brighter: #20242a;
 	--goonoled-secondary: #262930;
